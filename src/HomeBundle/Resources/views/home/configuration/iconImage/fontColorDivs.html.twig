@@ -1,0 +1,108 @@
+<style>
+    #filterIconButton {
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        top: 160px;
+        left: 15px;
+        z-index: 3;
+        background-color: white;
+        border-top-right-radius: 15px;
+    }
+</style>
+
+<div id='filterIconButton' class='animatedButton'>
+    
+{#    <input type='file' 
+    name='portrait_editVideoProperties' 
+    id='portrait_editVideoProperties'
+    src=""/>#}
+    
+</div>
+
+<script>
+    var filterIconButton = document.getElementById("filterIconButton");
+    
+    filterIconButton.addEventListener("click", function () {
+        filterIconFunction();
+    });
+    
+    function filterIconFunction()
+    {
+        var window_background = document.getElementById("window_background"); // PresentationBundle
+        var configurationArea_1Content = document.getElementById("configurationArea_1Content"); // ConfigurationBundle // eliminar
+        var sessionArea = document.getElementById("sessionArea"); // SessionBundle // eliminar
+        var searchArea = document.getElementById("searchArea"); // SessionBundle // eliminar
+        var filterIconButton = document.getElementById("filterIconButton"); // HomeBundle // eliminar
+        
+        
+        // about borders' style
+        var artistInformation_extraInfo = document.getElementById("artistInformation_extraInfo");
+        var logInForm = document.getElementById("logInForm");
+        var logOutForm = document.getElementById("logOutForm");
+        var songInformation = document.getElementById("songInformation");
+        var ContactInfoProfile = document.getElementById("ContactInfoProfile");
+        var videoListToDelete_123 = document.getElementById("videoListToDelete_123");
+        var artistIconButton = document.getElementById("artistIconButton");
+        var donateArea = document.getElementById("donateArea"); // configurationBundle
+        
+        
+        if (invisibleLayer_status === "1")
+        {
+            window_background.style.backgroundColor = "black";
+            configurationArea_1Content.style.color = "white";
+            sessionArea.style.color = "white";
+            searchArea.style.color = "white";
+            filterIconButton.style.backgroundColor = "white";
+            
+            configurationArea_1Content.style.textShadow = "0px 0px 5px black";
+            sessionArea.style.textShadow = "0px 0px 5px black";
+            
+            
+            
+
+            artistInformation_extraInfo.style.borderBottomColor = "white";
+            logInForm.style.borderBottomColor = "white";
+            logOutForm.style.borderBottomColor = "white";
+            songInformation.style.borderBottomColor = "white";
+            ContactInfoProfile.style.borderBottomColor = "white";
+            videoListToDelete_123.style.borderBottomColor = "white";
+            artistIconButton.style.borderBottomColor = "white";
+            donateArea.style.borderBottomColor = "white";
+            
+            invisibleLayer_status = "2";
+        } else if (invisibleLayer_status === "2")
+        {
+            window_background.style.backgroundColor = "white";
+            configurationArea_1Content.style.color = "black"; //
+            sessionArea.style.color = "black"; //
+            searchArea.style.color = "black"; //
+            filterIconButton.style.backgroundColor = "black";
+            
+            configurationArea_1Content.style.textShadow = "0px 0px 5px white";
+            sessionArea.style.textShadow = "0px 0px 5px white";
+            
+            
+            
+            
+
+            artistInformation_extraInfo.style.borderBottomColor = "black";
+            logInForm.style.borderBottomColor = "black";
+            logOutForm.style.borderBottomColor = "black";
+            songInformation.style.borderBottomColor = "black";
+            ContactInfoProfile.style.borderBottomColor = "black";
+            videoListToDelete_123.style.borderBottomColor = "black";
+            artistIconButton.style.borderBottomColor = "black";
+            donateArea.style.borderBottomColor = "black";
+            
+            invisibleLayer_status = "1";
+        }
+    }
+    
+    window.onload = loadDefaultWindowProperties();
+    
+    function loadDefaultWindowProperties()
+    {
+        
+    }
+</script>

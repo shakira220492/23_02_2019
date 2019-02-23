@@ -1,0 +1,26 @@
+<div>
+    delete video form
+</div>
+
+<script>
+
+    function DeleteVideoBundle()
+    {
+        deleteVideo(edit_video_id);
+        alert("DeleteVideoBundle");
+    }
+
+    function deleteVideo(videoId)
+    {
+        var form = $('#delete-video-ajax');
+        var url = form.attr('action');
+
+        $.post(url, {videoId: videoId}, function (data)
+        {
+            alert(".. delete-video-ajax");
+        }).fail(function () {
+            alert('ERROR .. delete-video-ajax');
+        });
+    }
+    
+</script>
